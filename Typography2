@@ -1,0 +1,22 @@
+<html>
+
+<title>Typography</title>
+
+<style>
+    .text{
+        color: red;
+        font-size: 30px;
+    }
+    .p1{
+        color: greenyellow;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+
+</style>
+<body>
+<h1>Typography</h1>
+<p class="text">Welcome to brawl stars.</p>
+<p class="h1">Welcome to brown stars</p>
+</body>
+</html>
