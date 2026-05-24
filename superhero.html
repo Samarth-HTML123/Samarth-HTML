@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My superhero cards Cards</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f0f4ff;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 { color: #ff5a43; }
+    p { color: #555; }
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+    }
+    .card {
+      background: white;
+      border: 3px solid #ff5a43;
+      border-radius: 12px;
+      padding: 20px;
+      width: 200px;
+    }
+    .planet-name {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+    .planet-fact { color: #666; margin-top: 10px; font-size: 14px; }
+    button {
+      background: #ff5a43;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My superhero Cards</h1>
+  <p>Use a JavaScript class to build superhero cards!</p>
+  <button onclick="showsuperhero()">Show superheros!</button>
+  <div class="cards">
+    <div id="card1"></div>
+    <div id="card2"></div>
+    <div id="card3"></div>
+  </div>
+  <script>
+    class superhero {
+      constructor(name, fact) {
+        this.name = name;
+        this.fact = fact;
+      }
+      describe() {
+        return this.name + ": " + this.fact;
+      }
+    }
+
+    function showsuperhero() {
+      let s1 = new superhero("Superman", "A man that is super and can fly");
+      let s2 = new superhero("spiderman", "the best superhero in the world");
+      let s3 = new superhero("thor", "The strongest superhero");
+
+      document.getElementById("card1").innerHTML =
+        "<div class='card'><div class='superhero-name'>" + s1.name + "</div>" +
+        "<div class='superhero-fact'>" + s1.describe() + "</div></div>";
+
+      document.getElementById("card2").innerHTML =
+        "<div class='card'><div class='superhero-name'>" + s2.name + "</div>" +
+        "<div class='superhero-fact'>" + s2.describe() + "</div></div>";
+
+      document.getElementById("card3").innerHTML =
+        "<div class='card'><div class='superhero-name'>" + s3.name + "</div>" +
+        "<div class='superhero-fact'>" + s3.describe() + "</div></div>";
+    }
+  </script>
+</body>
+</html>
