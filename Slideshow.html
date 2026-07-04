@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <section>
+            <img class="mySlides" src="nEYMAR.EZEZEZ.jpg" style="height:250px;">
+            <img class="mySlides" src="penaldo the great.ezezeze.jpg" style="height:250px;">
+             <img class="mySlides" src="pessi the not great.zezezeze.jpg" style="height:250px;">
+        </section>
+        <script>
+            //Automatic Slideshow - change image evert 3 seconds 
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementByClassName("mySlideshow");
+                for (i = 0; i < x.lenght; i++) {
+                    x[i].style.display= "none";
+
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myInde-1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
+        </script>
+    </body>
+</html>
